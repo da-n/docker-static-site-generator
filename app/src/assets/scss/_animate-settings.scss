@@ -1,10 +1,10 @@
 /////////////////////////////////////////////////////////
-// Animation Default Settings                          //
+// Animation Settings                                  //
 /////////////////////////////////////////////////////////
 
 
 // Base module settings
-$base-duration					: 2s !default;           // used in 1-base module
+$base-duration					: 1s !default;           // used in 1-base module
 $base-origin 					: top center !default;
 $base-degrees 					: 30deg !default;        // used in lightspeed & special modules
 $base-fill-mode					: both !default;
@@ -48,7 +48,7 @@ $hinge-translate 				: 700px !default;
 //==================================================================================================//
 
 $use-all                    :   false !default; // all animations status
-$use-fade               :   true !default; // all fades
+$use-fade               :   $use-all !default; // all fades
 $use-bounce             :   $use-all !default; // all bounces
 $use-rotate             :   $use-all !default; // all rotates
 $use-slide              :   $use-all !default; // all slide animations
@@ -58,8 +58,8 @@ $use-attention-seekers  :   $use-all !default; // all attention seeker animation
 $use-special            :   $use-all !default; // all special animations
 $use-zoom               :   $use-all !default; // all zoom animations
 // Fade Enter
-$use-fade-in            :   true !default;
-$use-fadeIn 			      :	$use-fade-in !default;
+$use-fade-in            :   $use-fade !default;
+$use-fadeIn 			:	$use-fade-in !default;
 $use-fadeInUp 			:	$use-fade-in !default;
 $use-fadeInUpBig 		:	$use-fade-in !default;
 $use-fadeInDown 		:	$use-fade-in !default;
@@ -182,3 +182,5 @@ $use-zoomOutDown		:	$use-zoom-out !default;
 $use-zoomOutLeft		:	$use-zoom-out !default;
 $use-zoomOutRight		:	$use-zoom-out !default;
 $use-zoomOutUp			:	$use-zoom-out !default;
+
+@import 'animate';
