@@ -34,7 +34,7 @@ You will see the output from the build process and running process, to stop it y
 
 *Note, you may need to change the name of the container if you are running several, check using `$ docker ps`.*
 
-Next time you want to run it, simply issue `$ docker-compose up` in the project directory.
+You should now be able to see the site running at [http://localhost:3000/](http://localhost:3000/).
 
 ## Interacting with Gulp, NPM etc
 
@@ -48,7 +48,7 @@ From there you can simply run `$ gulp` or `$ gulp watch`, as well as install NPM
 
 ## Developing sites
 
-You can develop sites by adding or editing the files inside `app/src`. Currently there is no template engine, so keeping it old school you just need to create any HTML file and edit as needed. Images and SASS should be stored in the `assets` folder.
+You can develop sites by adding or editing the files inside `app/src`, and you can do it from your normal filesystem using your normal editor (i.e. there is no need to `exec` into the docker container to edit files are synced). Currently there is no template engine or other helpers, so (keeping it old school) you just create and edit any HTML files and other assets as needed. Images and SASS should be stored in the `assets` folder. When gulp is run (either as a task or in watch mode) it compiles all files in the `src` directory into the `dist` directory, which is also the folder where `localhost:3000` is served from. Note, depending on how complex you make your build process, you won't see any changes until they have been compiled.
 
 ## Publishing to S3
 
