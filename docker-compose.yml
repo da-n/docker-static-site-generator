@@ -1,0 +1,15 @@
+nginx:
+    restart: always
+    build: ./server
+    links:
+        - node:node
+    ports:
+        - "80:80"
+node:
+    restart: always
+    user: node
+    build: ./app
+    ports:
+        - "3000"
+    volumes:
+        - ./app:/home/node

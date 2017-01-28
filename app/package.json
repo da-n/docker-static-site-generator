@@ -1,0 +1,43 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "Daniel Davidson",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "animate-sass": "^0.6.6",
+    "browser-sync": "^1.3.3",
+    "critical": "^0.8.1",
+    "foundation-sites": "^6.3.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-awspublish": "^3.3.0",
+    "gulp-awspublish-router": "^0.1.2",
+    "gulp-cache-bust": "^1.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-cloudfront-invalidate-aws-publish": "^0.2.1",
+    "gulp-concat-util": "^0.5.5",
+    "gulp-copy": "^1.0.0",
+    "gulp-image": "^2.7.3",
+    "gulp-image-resize": "^0.11.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-util": "^3.0.8",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "mocha": "^2.2.1",
+    "run-sequence": "^1.2.2"
+  }
+}
