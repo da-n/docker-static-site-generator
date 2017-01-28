@@ -147,7 +147,7 @@ gulp.task('invalidate', () => {
       'Cache-Control': 'max-age=315360000, no-transform, public'
     }))
     .pipe(cloudfront({
-      distribution: awsCredentials.cloudfront.distribution,
+      distribution: publisher.config.cloudfront.distribution,
       wait: true,
       indexRootPath: true
     }))
@@ -155,10 +155,13 @@ gulp.task('invalidate', () => {
     .pipe(awspublish.reporter());
 });
 
-// gulp.watch('src/assets/scss/**/*.scss', ['sass', 'critical', 'cachebuster']);
-// gulp.watch('src/assets/image/**/*', ['image']);
-// gulp.watch('src/**/*.html', ['html', 'critical', 'cachebuster']);
+// Watch tasks
+gulp.task('watch', function () {
+    gulp.watch('src/assets/scss/**/*.scss', ['default']);
+    gulp.watch('src/**/*.html', ['default']);
+});
 
+// Default task
 gulp.task('default', (callback) => {
   runSequence('clean', 'copy', 'sass', 'image', 'cachebuster', 'critical')
 });
